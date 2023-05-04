@@ -1,12 +1,20 @@
 package exerciseTwo;
 
+import java.util.Scanner;
+
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		int number = 1;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("Insert a number:");
+		int number = input.nextInt();
 		
 		CheckNumber(number);
+		
+		input.close();
 	}
 	
 	public static void CheckNumber(int number) {
@@ -26,5 +34,9 @@ public class Main {
 		default:
 			System.out.println("ERROR: could not read number. Try again.");
 		}
+		
+		
 	}
+	
+	
 }

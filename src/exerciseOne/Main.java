@@ -7,7 +7,7 @@ public class Main {
 		String pariDispari = "epicode";
 		System.out.println(pariDispari + " " + CheckPari(pariDispari));
 		
-		int anno = 2024;
+		int anno = 1700;
 		System.out.println(anno + " " + CheckBisestile(anno));
 		
 	}
@@ -23,10 +23,18 @@ public class Main {
 	
 	public static boolean CheckBisestile(int anno) {
 		
-		if(anno % 4 == 0 || anno % 100 == 0 && anno % 400 == 0) {
-			return true;		
-		} else {
-			return false;
-		}
+		 if (anno % 4 == 0) {
+		      if (anno % 100 == 0) {
+		        if (anno % 400 == 0) {
+		          return true;
+		        } else {
+		          return false;
+		        }
+		      } else {
+		        return true;
+		      }
+		    } else {
+		      return false;
+		    }
 	}
 }
